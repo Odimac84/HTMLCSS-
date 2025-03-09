@@ -9,8 +9,6 @@ header {
     align-items: center;
     text-align: center;
     padding: 10px;
-    background: black;
-    color: white;
 }
 nav ul {
     list-style: none;
@@ -22,10 +20,10 @@ nav ul {
 nav ul li {
     display: inline;
 }
-.hero {
+.pointers {
+    flex-direction: colomn;
+    align-items: spave-between;
     text-align: center;
-    padding: 50px;
-    background: #eee;
 }
 .product-grid {
     display: grid;
