@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freaky Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Script för att öppna och stänga dropdown i footern i mobil läge. -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".footer-section h3").forEach(header => {
+                header.addEventListener("click", function () {
+                    this.parentElement.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Freaky Fashion</div>
+        <nav>
+            <ul>
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Bästsäljare</a></li>
+                <li><a href="#">Kvinnor</a></li>
+                <li><a href="#">Män</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Sök produkt">
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Välkommen till Freaky Fashion</h1>
+            <p>Gratis frakt och returer | Expressfrakt | Säkra betalningar | Nyheter varje dag</p>
+        </section>
+        <section class="products">
+            <h2>Populära Produkter</h2>
+            <div class="product-grid">
+                <!-- 8 identiska produkter där 1 visas för uppbyggnad -->
+                <a href="product-details.html" class="product-card">
+                    <div >
+                        <span class="badge">Nyhet</span>
+                        <div>
+                            <img src="tshirt.jpg" alt="Svart T-Shirt">
+                            <span class="wishlist">❤️</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card-info">
+                        <h3>Svart T-Shirt</h3>
+                        <h3>199 SEK</p>
+                    </div>
+                    <p class="brand"> Levis </p>
+                    <span class="details">Se mer</span>
+                    
+                </a>
+                <!-- produkter på one liners för att ta mindre plats -->
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Shopping</h3>
+                <ul>
+                    <li>Vinterjackor</li>
+                    <li>Pufferjackor</li>
+                    <li>Kappa</li>
+                    <li>Trenchcoats</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Mina Sidor</h3>
+                <ul>
+                    <li>Mina Ordrar</li>
+                    <li>Mitt Konto</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kundtjänst</h3>
+                <ul>
+                    <li>Returnpolicy</li>
+                    <li>Integritetspolicy</li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; Freaky Fashion</p>
+    </footer>
+</body>
+</html>
