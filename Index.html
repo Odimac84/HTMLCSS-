@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freaky Fashion</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Script för att öppna och stänga dropdown i footern i mobil läge. -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".footer-section h3").forEach(header => {
@@ -18,9 +17,8 @@
 </head>
 <body>
     <header>
-        <!-- LÄGGA SAKER PÅ RÄTT PLATS OCH FIXA CSS -->
+        <!-- LOGO samt knappar för kassa och wishlist -->
         <div class="logo">Freaky Fashion</div>
-        
         <div class="search-bar">
             <input type="text" placeholder="Sök produkt">
         </div>
@@ -33,39 +31,112 @@
             </ul>
         </nav>
     </header>
+    
     <main>
+        <!-- LÄGGA IN HERO OCH SPOTS I 1024PX eller större  -->
         <section class="products">
             <h2>Populära Produkter</h2>
             <div class="product-grid">
-                <!-- 8 identiska produkter där 1 visas för uppbyggnad -->
+                <!-- Produktkort -->
                 <a href="product-details.html" class="product-card">
-                    <div >
+                    <div class="product-image-container">
                         <span class="badge">Nyhet</span>
-                        <div>
-                            <img src="tshirt.jpg" alt="Svart T-Shirt">
-                            <span class="wishlist">❤️</span>
-                        </div>
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                        <span class="wishlist">❤️</span>
                     </div>
-                    
                     <div class="product-card-info">
-                        <h3>Svart T-Shirt</h3>
-                        <h3>199 SEK</p>
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
                     </div>
-                    <p class="brand"> Levis </p>
+                    <p class="no-decoration">Levis</p>
                     <span class="details">Se mer</span>
-                    
                 </a>
-                <!-- produkter på one liners för att ta mindre plats, GLÖM EJ GÖRA OM EFTER FÖRSTA ÄR KLAR. -->
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
-                <a href="product-details.html" class="product-card"><img src="tshirt.jpg" alt="Svart T-Shirt"><h3>Svart T-Shirt</h3><p>199 SEK</p><span class="details">Se mer</span><span class="wishlist">♡</span></a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
+
+                <a href="product-details.html" class="product-card">
+                    <div class="product-image-container">
+                        <img src="tshirt.jpg" alt="Svart T-Shirt">
+                    </div>
+                    <div class="product-card-info">
+                        <h3 class="no-decoration">Svart T-Shirt</h3>
+                        <p class="no-decoration">199 SEK</p>
+                    </div>
+                    <p class="no-decoration">Levis</p>
+                    <span class="details">Se mer</span>
+                </a>
             </div>
         </section>
-        <!-- GÖRAS OM MED TAGS OCH FLEX BOX -->
         <section class="pointers">
             <div class="pointers-grid">
                 <span>Gratis frakt och returer</span>
@@ -75,7 +146,7 @@
             </div>
         </section>
     </main>
-    <!-- KONTROLLERA ACCORDION -->
+    <!-- Accordinon JS, testa bygga med details tag -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">

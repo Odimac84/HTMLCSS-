@@ -1,15 +1,24 @@
+/* Grundläggande styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    text-decoration: none;
 }
+
+/* Header */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 10px;
+    background: white;
+    border-bottom: 2px solid #ddd;
 }
+
+/* Navbar */
 nav ul {
     list-style: none;
     padding: 0;
@@ -17,26 +26,19 @@ nav ul {
     flex-wrap: wrap;
     gap: 10px;
 }
+
 nav ul li {
     display: inline;
 }
-.pointers {
-    flex-direction: colomn;
-    align-items: spave-between;
-    text-align: center;
-}
+
+/* Produktlayout med badges */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(1, 1fr));
     gap: 20px;
     padding: 20px;
 }
-.pointers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+
 .product-card {
     position: relative;
     padding: 10px;
@@ -44,17 +46,26 @@ nav ul li {
     text-align: center;
     background: white;
     border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
 }
+
+.product-image-container {
+    position: relative;
+}
+
 .product-card img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
+
 .product-card-info {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
+
 .badge {
     position: absolute;
     top: 10px;
@@ -62,21 +73,29 @@ nav ul li {
     background: black;
     color: white;
     padding: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
     border-radius: 3px;
 }
+
+.wishlist {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Textstyling */
 .brand {
     font-size: 1.2em;
     color: black;
     text-align: left;
 }
-.wishlist {
-    position: absolute;
-    bottom: 8em;
-    right: 1em;
-    font-size: 1.5em;
-    cursor: pointer;
-}
+
 .details {
     display: block;
     margin-top: 10px;
@@ -86,6 +105,29 @@ nav ul li {
     padding: 5px 10px;
     border-radius: 3px;
 }
+.no-decoration {
+    font-size: 1.2em;
+    color: black;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* Footer */
+
+.pointers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.pointers-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
 .footer {
     background: #f0f0f0;
     color: black;
@@ -93,71 +135,69 @@ nav ul li {
     text-align: center;
     border-top: 2px solid #ccc;
 }
+
 .footer-container {
     display: flex;
     flex-direction: column;
 }
+
 .footer-section {
     text-align: left;
     margin-bottom: 10px;
     padding: 10px;
 }
+
 .footer-section h3 {
     cursor: pointer;
     margin: 0;
     padding: 10px;
     border-radius: 5px;
 }
+
 .footer-section ul {
     list-style: none;
     padding: 0;
     display: none;
 }
-.footer-section ul li {
-    padding: 5px 10px;
+
+.footer-section.active ul {
+    display: block;
 }
-@media (max-width: 639px) {
-    .footer-section.active ul {
-        display: block;
-    }
-    .product-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .pointers-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
+
+/* Responsivitet beroende på skärmstorlek */
 @media (min-width: 640px) {
     header {
         flex-direction: row;
         justify-content: space-between;
         padding: 20px;
     }
+
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .pointers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
     .footer-container {
         flex-direction: row;
-        justify-content: flex-start;
     }
+
     .footer-section ul {
         display: block;
     }
+
+    .pointers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
 @media (min-width: 1024px) {
     .product-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    .pointers-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+
     .footer-container {
         flex-direction: row;
     }
-    .footer-section ul {
-        display: block;
+    .pointers-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
