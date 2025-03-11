@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freaky Fashion</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Index.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".footer-section h3").forEach(header => {
@@ -33,7 +33,37 @@
     </header>
     
     <main>
-        <!-- LÄGGA IN HERO OCH SPOTS I 1024PX eller större  -->
+        <!-- LÄGGA IN HERO OCH SPOTS I 1024PX eller större, sätta text mitt på bild.  -->
+        <section class="hero">
+            <img src="tshirt.jpg" alt="Hero">
+            <div class="hero-text">
+                <h1>Stil för alla</h1>
+                <p>Upptäck vårt sortiment av kläder för kvinnor
+            </div>
+        </section>
+        <section class="spots">
+            <div class="spot">
+                <img src="tshirt.jpg" alt="Spot 1">
+                <div class="spot-text">
+                    <h2>Jackor</h2>
+                    <p>Stiliga jackor för alla tillfällen</p>
+                </div>
+            </div>
+            <div class="spot">
+                <img src="tshirt.jpg" alt="Spot 2">
+                <div class="spot-text">
+                    <h2>Accessoarer</h2>
+                    <p>Stiliga accessoarer för alla tillfällen</p>
+                </div>
+            </div>
+            <div class="spot">
+                <img src="tshirt.jpg" alt="Spot 3">
+                <div class="spot-text">
+                    <h2>Skor</h2>
+                    <p>Stiliga skor för alla tillfällen</p>
+                </div>
+            </div>
+        </section>
         <section class="products">
             <h2>Populära Produkter</h2>
             <div class="product-grid">
@@ -137,7 +167,7 @@
                 </a>
             </div>
         </section>
-        <section class="pointers">
+        <section class="center">
             <div class="pointers-grid">
                 <span>Gratis frakt och returer</span>
                 <span>Expressfrakt</span>
@@ -146,8 +176,35 @@
             </div>
         </section>
     </main>
-    <!-- Accordinon JS, testa bygga med details tag -->
-    <footer class="footer">
+    <!-- Accordinon JS, men men en utan JS byggd med Details tag, Details tag måste ha JS för att hållas öppen -->
+
+    <!--     <footer class="footer">
+        <div class="footer-container">
+        <details class="footer-section">
+            <summary><h3>Shopping</h3></summary>
+            <ul>
+                <li>Vinterjackor</li>
+                <li>Pufferjackor</li>
+                <li>Kappa</li>
+                <li>Trenchcoats</li>
+            </ul>
+        </details>
+        <details class="footer-section">
+            <summary><h3>Mina Sidor</h3></summary>
+            <ul>
+                <li>Mina Ordrar</li>
+                <li>Mitt Konto</li>
+            </ul>
+        </details>
+        <details class="footer-section">
+            <summary><h3>Kundtjänst</h3></summary>
+            <ul>
+                <li>Returnpolicy</li>
+                <li>Integritetspolicy</li>
+            </ul>
+        </details>
+        </div> -->
+
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Shopping</h3>
@@ -173,7 +230,7 @@
                 </ul>
             </div>
         </div>
-        <p>&copy; Freaky Fashion</p>
+        <p class="center">&copy; Freaky Fashion</p>
     </footer>
 </body>
 </html>
