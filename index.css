@@ -218,18 +218,10 @@ summary::-webkit-details-marker {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .footer-container {
-        flex-direction: row;
-    }
     .pointers-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    .footer-section h3 {
-        cursor: default;
-        margin: 0;
-        padding: 10px;
-        border-radius: 5px;
-    }
+
     .spots {
         flex-direction: row;
         display: flex;
@@ -244,12 +236,15 @@ summary::-webkit-details-marker {
         border: 1px solid #ddd;
         border-radius: 5px;
         overflow: hidden;
+        position: relative;
     }
     .spot-text {
-        font-size: 2em;
+        font-size: 1em;
         color: rgb(231, 15, 15);
-        text-align: center;
         position: absolute;
-
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freaky Fashion</title>
+    <link rel="stylesheet" href="Index.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".footer-section h3").forEach(header => {
+                header.addEventListener("click", function () {
+                    this.parentElement.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        
+    </header>
+    
+    <main>
+        <form action="new.php" method="post">
+            <label for="name">Namn</label>
+            <input type="text" name="name" id="name" required>
+            <label for="description">Beskrivning</label>
+            <textarea name="description" id="description" required></textarea>
+            <label for="price">Pris</label>
+            <input type="number" name="price" id="price" required>
+            <label for="image">Bild</label>
+            <input type="file" name="image" id="image" required>
+            <button type="submit">Lägg till</button>
+        </form>
+    </main>
+    <!-- Accordinon JS, men men en utan JS byggd med Details tag, Details tag måste ha JS för att hållas öppen -->
+
+         <footer class="footer">
+    
+    </footer>
+</body>
+</html>
