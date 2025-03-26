@@ -1,0 +1,86 @@
+.header {
+    background: black;
+    color: white;
+    padding: 10px;
+}
+.admin-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    min-height: 80vh;
+}
+.header-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.admin-sidebar {
+    background: gray;
+    width: 10%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.admin-main-section {
+    width: 90%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}	
+
+.button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.product-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.product-table {
+    width: 100%;
+    border: 1px solid black;
+    table-layout: calc(100% - 20px);
+}
+
+.footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: gray;
+}
+
+.th-product {
+    width: 40%;
+}
+
+.th-SKU {
+    width: 20%;
+}
+
+.th-price {
+    width: 20%;
+}
+
+.th-edit {
+    width: 15%;
+    align-items: center;
+}
