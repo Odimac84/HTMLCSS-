@@ -13,7 +13,7 @@ body {
 }
 .admin-main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin: 10px;
     min-height: 80vh;
