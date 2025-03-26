@@ -12,7 +12,7 @@ body {
     margin: 1em 0;
 }
 /* Header */
-header {
+.header-main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,12 +20,12 @@ header {
     background: black;
     color: white;
 }
-header a {
+.header-main a {
     color: white;
     text-decoration: none;
 }
 /* Navbar */
-nav ul {
+.nav-links {
     list-style: none;
     padding: 0;
     display: flex;
@@ -33,7 +33,7 @@ nav ul {
     gap: 10px;
 }
 
-nav ul li {
+.nav-links li {
     display: inline;
 }
 .icon {
