@@ -18,7 +18,7 @@
     border-radius: 5px;
 }
 .admin-sidebar {
-    background: gray;
+    background: lightgrey;
     width: 10%;
     padding: 10px;
     border: 1px solid black;
@@ -65,7 +65,7 @@
 }
 
 .product-table tr:nth-child(even) {
-    background-color: gray;
+    background-color: lightgrey;
 }
 
 .th-product {
@@ -83,4 +83,49 @@
 .th-edit {
     width: 15%;
     align-items: center;
+}
+
+/* Textstyling för FORM */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-shorter {
+    max-width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#description {
+    height: 100px;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#submit-form {
+    background: lightgrey;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 75px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
