@@ -20,7 +20,7 @@ body {
 .header-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     background: black;
     color: white;
@@ -33,7 +33,6 @@ body {
 .header-logo-search {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     width: 100%;
     max-height: auto;
     overflow: hidden;
@@ -43,17 +42,24 @@ body {
     height: auto;
 }
 
+.search-bar {
+  margin-top: 10px;
+}
+
 /* Navbar */
 .nav-links {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
+    flex-direction: column;
+    margin-left: 10px;
 }
 
 .nav-links li {
-    display: inline;
+    display: flex;
+    flex-direction: column;
 }
 .icon {
     font-size: 20px;
@@ -210,14 +216,63 @@ summary  {
 
 /* Responsivitet beroende på skärmstorlek */
 @media (min-width: 640px) {
-    header {
-        flex-direction: row;
+    .header-main {
+        flex-direction: column;
         justify-content: space-between;
-        padding: 20px;
+        position: relative;
+        max-width: 97%;
+    }
+
+    .logo {
+        width: 200px;
+        height: auto;
+    }
+    
+    .header-logo-search {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 5px;
+
+    }
+    
+    .search-bar {
+       position: absolute;
+       top: 10px;
+       right: 20px;
+       margin: 0;
+       padding: 0;
+
+    }
+
+     .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .hero {
+        margin-top: 40px;
+    }
+    .hero img {
+        min-width: 90%;
+        height: 500px;
+        object-fit: cover;   
     }
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pointers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-section h3 {
+        cursor: default;
+        margin: 0;
+        padding: 10px;
+        border-radius: 5px;
     }
 
     .footer-container {
@@ -227,46 +282,33 @@ summary  {
     .footer-section ul {
         display: block;
     }
-
-    .pointers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .footer-section h3 {
-        cursor: default;
-        margin: 0;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .header-logo-search {
-        display: flex;
-        flex-direction: row;
-        padding: 20px;
-        width: 100%;
-    }
-    .logo {
-        width: 200px;
-        height: auto;
-    }
-    .search-bar {
-        margin-left: auto;
-    }
-    .hero {
-        margin-top: 40px;
-    }
-    .hero img {
-        min-width: 90%;
-        height: 500px;
-        object-fit: cover;
-        
-    }
 }
 
 @media (min-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(4, 1fr);
+    .hero {
+        display: flex;
+        text-align: center;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
     }
-
-    .pointers-grid {
+    .hero img {
+        min-width: 50%;
+        height: 600px;
+        object-fit: contain;
+        margin-left: auto;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        max-width: 33%;;
+    }
+    
+    .product-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -295,26 +337,8 @@ summary  {
         transform: translate(-50%, -50%);
         text-align: center;
     }
-    .hero {
-        display: flex;
-        text-align: center;
-        flex-direction: row-reverse;
-        justify-content: space-evenly;
-        align-items: center;
+    .pointers-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
-    .hero img {
-        min-width: 50%;
-        height: 600px;
-        object-fit: contain;
-        margin-left: auto;
-    }
-    .hero-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        max-width: 33%;;
-    }
+
 }
