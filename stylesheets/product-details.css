@@ -255,7 +255,7 @@ body {
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; /* Döljer scrollbar för Webkit-baserade browsers */
+    display: none; /* Döljer scrollbar för Webkit-baserade browsers !!läs safari!! */
 }
 
 .carousel-item {
