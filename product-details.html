@@ -4,16 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produktsida - Freaky Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/stylesheets/product-details.css">
+    <script>
+        // Accordion för footer känner av när man klickar på rubrikerna och ändrar då CSS till att visa eller dölja innehållet
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".footer-section h3").forEach(header => {
+                header.addEventListener("click", function () {
+                    this.parentElement.classList.toggle("active");
+                });
+            });
+        });
+        
+        // för carousel hämtar in div med produkter i och scrollar 3 produkter åt gången när man trycker på fram eller tillbaka knapp
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.querySelector(".carousel-track");
+            const prevButton = document.querySelector(".prev");
+            const nextButton = document.querySelector(".next");
+
+            const itemWidth = document.querySelector(".carousel-item").offsetWidth;
+            const scrollAmount = itemWidth * 1; 
+
+            nextButton.addEventListener("click", () => {
+                track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+
+            prevButton.addEventListener("click", () => {
+                track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+            });
+        });
+    </script>
 </head>
 <body>
 
     <!-- HEADER -->
-    <header>
-        <h1>Freaky Fashion</h1>
-        <input type="text" placeholder="Sök produkt">
+    <header class="header-main">
+        <div class="header-logo-search">
+            <img src="https://placehold.co/400x200.png" alt="logo" class="logo">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Sök produkt">
+                <div class="header-buttons">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </div>
         <nav>
-            <ul>
+            <ul class = "nav-links">
                 <li><a href="#">Nyheter</a></li>
                 <li><a href="#">Bästsäljare</a></li>
                 <li><a href="#">Kvinnor</a></li>
@@ -38,29 +75,84 @@
                     ea commodo consequat.</p>
                 <p class="brand">Levis</p>
                 <p class="price">199 SEK</p>
-                <button class="button">🛒 Lägg i varukorg</button>
+                <button class="buy-button">🛒 Lägg i varukorg</button>
             </div>
         </div>
 
         <!-- Liknande produkter -->
-        <section class="related-products">
-            <h3>Liknande produkter</h3>
-            <div class="product-list">
-                <div class="product-item"><img src="tshirt.jpg" alt="Vit T-Shirt"><p>Vit T-Shirt</p><p>199 SEK</p></div>
-                <div class="product-item"><img src="tshirt.jpg" alt="Blå T-Shirt"><p>Blå T-Shirt</p><p>199 SEK</p></div>
-                <div class="product-item"><img src="tshirt.jpg" alt="Röd T-Shirt"><p>Röd T-Shirt</p><p>199 SEK</p></div>
+
+        <section class="carousel">
+            <div class="carousel-container">
+                <button class="carousel-button prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="product-details.html" class="carousel-item product-card-carousel">
+                        <div class="product-image-container">
+                            <img src="tshirt.jpg" alt="Svart T-Shirt">
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="no-decoration">Svart T-Shirt</h3>
+                            <p class="no-decoration">199 SEK</p>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="carousel-item product-card-carousel">
+                        <div class="product-image-container">
+                            <img src="tshirt.jpg" alt="Orange T-Shirt">
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="no-decoration">Orange T-Shirt</h3>
+                            <p class="no-decoration">199 SEK</p>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="carousel-item product-card-carousel">
+                        <div class="product-image-container">
+                            <img src="tshirt.jpg" alt="Grön T-Shirt">
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="no-decoration">Grön T-Shirt</h3>
+                            <p class="no-decoration">199 SEK</p>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="carousel-item product-card-carousel">
+                        <div class="product-image-container">
+                            <img src="tshirt.jpg" alt="Vit T-Shirt">
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="no-decoration">Vit T-Shirt</h3>
+                            <p class="no-decoration">199 SEK</p>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="carousel-item product-card-carousel">
+                        <div class="product-image-container">
+                            <img src="tshirt.jpg" alt="Blå T-Shirt">
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="no-decoration">Blå T-Shirt</h3>
+                            <p class="no-decoration">199 SEK</p>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="carousel-item product-card-carousel">
+                        <div class="product-image-container">
+                            <img src="tshirt.jpg" alt="Gul T-Shirt">
+                        </div>
+                        <div class="product-card-info">
+                            <h3 class="no-decoration">Gul T-Shirt</h3>
+                            <p class="no-decoration">199 SEK</p>
+                        </div>
+                    </a>
+                </div>
+                <button class="carousel-button next">&gt;</button>
+            </div>
+        </section>
+        <section class="center">
+            <div class="pointers-grid">
+                <span><i class="fa-solid fa-box"></i> Gratis frakt och returer</span>
+                <span><i class="fa-solid fa-truck-fast"></i> Expressfrakt</span>
+                <span><i class="fa-solid fa-credit-card"></i> Säkra betalningar</span>
+                <span><i class="fa-solid fa-shirt"></i> Nyheter varje dag</span>
             </div>
         </section>
     </main>
-    <section class="center">
-        <div class="pointers-grid">
-            <span>Gratis frakt och returer</span>
-            <span>Expressfrakt</span>
-            <span>Säkra betalningar</span>
-            <span>Nyheter varje dag</span>
-        </div>
-    </section>
-    <!-- FOOTER -->
+        <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">

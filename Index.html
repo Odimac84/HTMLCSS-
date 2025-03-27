@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freaky Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="stylesheets/Index.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -14,7 +15,7 @@
             });
         });
     </script>
-    <script src="https://kit.fontawesome.com/35a5ba4fd9.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header class="header-main">
@@ -22,7 +23,11 @@
         <div class="header-logo-search">
             <img src="https://placehold.co/400x200.png" alt="logo" class="logo">
             <div class="search-bar">
-                <input type="text" placeholder="Sök produkt">
+                <input type="text" id="search" placeholder="Sök produkt">
+                <div class="header-buttons">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
             </div>
         </div>
         <nav>
@@ -41,7 +46,6 @@
             <img src="tshirt.jpg" alt="Hero">
             <div class="hero-text">
                 <h2>Stil för alla</h2>
-                <i class="fa-solid fa-star icon">test</i>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos accusantium excepturi perferendis molestiae quia saepe beatae. Tempore, inventore perspiciatis est labore facere sunt corporis. Quo minima sed pariatur aliquid magnam!</p>
             </div>
         </section>
@@ -76,7 +80,7 @@
                     <div class="product-image-container">
                         <span class="badge">Nyhet</span>
                         <img src="tshirt.jpg" alt="Svart T-Shirt">
-                        <span class="wishlist">❤️</span>
+                        <span class="wishlist"><i class="fa-solid fa-heart"></i></span>
                     </div>
                     <div class="product-card-info">
                         <h3 class="no-decoration">Svart T-Shirt</h3>
@@ -173,10 +177,10 @@
         </section>
         <section class="center">
             <div class="pointers-grid">
-                <span>Gratis frakt och returer</span>
-                <span>Expressfrakt</span>
-                <span>Säkra betalningar</span>
-                <span>Nyheter varje dag</span>
+                <span><i class="fa-solid fa-box"></i> Gratis frakt och returer</span>
+                <span><i class="fa-solid fa-truck-fast"></i> Expressfrakt</span>
+                <span><i class="fa-solid fa-credit-card"></i> Säkra betalningar</span>
+                <span><i class="fa-solid fa-shirt"></i> Nyheter varje dag</span>
             </div>
         </section>
     </main>
