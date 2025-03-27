@@ -44,7 +44,7 @@ body {
 }
 
 .search-bar {
-  margin-top: 10px;
+  margin-top: 0.5rem;
 }
 .fa-heart .fa-cart-shopping {
     font-size: 1.5em;
@@ -52,7 +52,7 @@ body {
     text-decoration: none;
 }
 .header-buttons {
-    margin-top: 10px;
+    margin-top: 0.5rem;
 }
 
 /* Navbar */
@@ -63,7 +63,7 @@ body {
     flex-wrap: wrap;
     gap: 5px;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 0.5rem;
 }
 
 .nav-links li {
@@ -83,12 +83,11 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(1, 1fr));
     gap: 20px;
-    padding: 20px;
 }
 
 .product-card {
     position: relative;
-    padding: 10px;
+    padding: 0.5rem;
     border: 1px solid #ddd;
     text-align: center;
     background: white;
@@ -119,7 +118,7 @@ body {
     left: 10px;
     background: red;
     color: white;
-    padding: 5px;
+    padding: 0.2rem;
     font-size: 0.9em;
     border-radius: 3px;
 }
@@ -142,17 +141,17 @@ body {
 
 .details {
     display: block;
-    margin-top: 10px;
+    margin-top: 0.5rem;
     text-decoration: none;
     background: black;
     color: white;
-    padding: 5px 10px;
+    padding: 0.3rem 0.5rem;
     border-radius: 3px;
 }
 .no-decoration {
     font-size: 1.2em;
     color: black;
-    margin-top: 10px;
+    margin-top: 0.5rem;
     text-decoration: none;
 }
 
@@ -178,13 +177,13 @@ summary  {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .footer {
     background: #f0f0f0;
     color: black;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     border-top: 2px solid #ccc;
 }
@@ -196,14 +195,14 @@ summary  {
 
 .footer-section {
     text-align: left;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
 }
 
 .footer-section h3 {
     cursor: pointer;
     margin: 0;
-    padding: 10px;
+    padding: 0.8rem;
     border-radius: 5px;
 }
 
@@ -217,6 +216,95 @@ summary  {
 .footer-section.active ul {
     display: block;
 }
+
+/* Checkout */
+
+.checkout-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Kundvagn */
+.cart-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.cart-summary th, .cart-summary td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.cart-summary th {
+    background: #f8f8f8;
+}
+
+/* Kunduppgifter */
+.customer-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+}
+form input {
+    width: 90%;
+}
+
+.form-group input {
+    width: 48%;
+}
+
+input, fieldset {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+.address-fieldset {
+    max-width: 95%;
+}
+fieldset legend {
+    font-weight: bold;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Köp-knapp */
+.checkout-button {
+    background: #333;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.checkout-button:hover {
+    background: #555;
+}
+
 
 /* Responsivitet beroende på skärmstorlek */
 @media (min-width: 640px) {
@@ -236,7 +324,7 @@ summary  {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         width: 100%;
-        margin: 5px;
+        margin: 0.5rem;
     }
     
     .header-buttons {
@@ -254,7 +342,7 @@ summary  {
     }
    
     .hero {
-        margin-top: 40px;
+        margin-top: 2rem;
     }
     .hero img {
         min-width: 90%;
@@ -273,7 +361,7 @@ summary  {
     .footer-section h3 {
         cursor: default;
         margin: 0;
-        padding: 10px;
+        padding: 0.5rem;
         border-radius: 5px;
     }
 
@@ -283,6 +371,21 @@ summary  {
 
     .footer-section ul {
         display: block;
+    }
+    .checkout-pointers {
+        display: none;
+    }
+
+    .checkout-container {
+        width: 90%;
+        padding: 1rem;
+    }
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-group input {
+        width: 100%;
     }
 }
 
@@ -306,7 +409,7 @@ summary  {
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 20px;
+        padding: 1rem;
         max-width: 33%;;
     }
     
@@ -324,7 +427,7 @@ summary  {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 0.5rem;
         border: 1px solid #ddd;
         border-radius: 5px;
         overflow: hidden;

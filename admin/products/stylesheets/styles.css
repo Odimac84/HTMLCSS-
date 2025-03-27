@@ -27,7 +27,7 @@ body {
 }
 .admin-sidebar {
     background: lightgrey;
-    width: 10%;
+    width: 20%;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -91,6 +91,12 @@ body {
 .th-edit {
     width: 15%;
     align-items: center;
+}
+td a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /* Textstyling för FORM */
