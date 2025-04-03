@@ -34,6 +34,7 @@ body {
     width: 100%;
     max-height: auto;
     overflow: hidden;
+    align-items: center;
 }
 .logo {
     width: 100%;
@@ -41,16 +42,24 @@ body {
 }
 
 .search-bar {
-  margin-top: 10px;
-}
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;    
+    max-height: 30px;
+    max-width: 200px;
+}¨
+
 .fa-heart .fa-cart-shopping {
     font-size: 1.5em;
     cursor: pointer;
     text-decoration: none;
+
 }
 
 .header-buttons {
     margin-top: 10px;
+    display: flex;
+    gap: 10px;
 }
 /* Navbar */
 .nav-links {
@@ -304,8 +313,8 @@ body {
     }
     
     .header-logo-search {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        display: flex;
+        flex-direction: row;
         width: 100%;
         margin: 5px;
     }
@@ -367,7 +376,6 @@ body {
     .carousel {
         display: block;
     }
-
 }
 
 /* Desktop-storlek */

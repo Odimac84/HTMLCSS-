@@ -234,19 +234,63 @@ h1, h2 {
 }
 
 /* Kundvagn */
-.cart-summary table {
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 0.5rem
+}
+
+.cart-summary-row p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cart-summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 5px;
+}
+.cart-summary-price {
+    flex-direction: column;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.cart-summary-tab {
+    display: none
+}
+
+.cart-summary-tab table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
 }
 
-.cart-summary th, .cart-summary td {
-    border: 1px solid #ddd;
+.cart-summary-tab th, .cart-summary-tab td {
+    border: 1px solid black;
     padding: 0.75rem;
     text-align: left;
 }
 
-.cart-summary th {
+.cart-summary-tab th {
     background: #f8f8f8;
 }
 
@@ -287,6 +331,20 @@ label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+.newsletter-label {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.newsletter-checkbox {
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    align-content: center;
 }
 
 /* Köp-knapp */
@@ -336,7 +394,6 @@ label {
     }
 
      .nav-links {
-        display: flex;
         flex-direction: row;
         gap: 10px;
     }
@@ -386,6 +443,18 @@ label {
 
     .form-group input {
         width: 100%;
+    }
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .cart-summary-tab {
+        display: block;
+    }
+    .cart-summary {
+        display: none;
     }
 }
 

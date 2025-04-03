@@ -26,10 +26,14 @@
                     <input type="text" name="name" id="name" class="input-shorter" required placeholder="Ange Namn" maxlength="50">
                     <label for="description">Beskrivning</label>
                     <textarea name="description" id="description"  placeholder="Ange Beskrivning"></textarea>
-                    <label for="image">Bild</label>
+                    <label for="image" required>Bild</label>
                     <input type="file" name="image" id="image" accept="image/*" >
                     <label for="SKU">SKU</label>
-                    <input type="text" name="SKU" id="SKU" class="input-shorter" 
+                    <input type="text" 
+                        name="SKU" 
+                        id="SKU" 
+                        class="input-shorter"
+                        required 
                         placeholder="SKU format ABC123" 
                         pattern="[A-Z]{3}[0-9]{3}" 
                         title="Ange ett SKU i formatet ABC123 (tre stora bokstäver följt av tre siffror)"

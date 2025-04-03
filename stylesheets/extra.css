@@ -14,8 +14,8 @@
 }
 .slides {
     position: relative;
-    max-width: 100%; 
-    height: 400px;
+    max-width: 30%; 
+    height: auto;
   }
 .slides img, .slides figcaption, .slides label {
     position: absolute;
