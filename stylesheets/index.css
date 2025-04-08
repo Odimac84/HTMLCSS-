@@ -305,6 +305,10 @@ h1, h2 {
     justify-content: space-between;
     max-width: 90%;
 }
+.form-group-row {
+    display: flex;
+    width: 94%;
+}
 form input {
     width: 90%;
 }
@@ -455,6 +459,12 @@ label {
     }
     .cart-summary {
         display: none;
+    }
+    .form-group-row {
+        width: 100%;
+    }
+    .address-fieldset .form-group-row {
+        width: 90%;
     }
 }
 
