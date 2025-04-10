@@ -61,8 +61,8 @@ body {
 }
 .product-table {
     width: 100%;
-    border: 1px solid black;
-    table-layout: calc(100% - 20px);
+    border-collapse: collapse;
+    border: 1px solid #ddd;
 }
 
 .footer-admin {
@@ -92,12 +92,24 @@ body {
     width: 15%;
     align-items: center;
 }
+
 td a {
     text-decoration: none;
     color: black;
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+}
+
 
 /* Textstyling för FORM */
 .form-container {
