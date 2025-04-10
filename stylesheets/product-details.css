@@ -179,7 +179,7 @@ body {
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style: none; 
     padding: 0;
     display: none;
     margin-left: 1em;
